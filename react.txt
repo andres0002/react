@@ -1,0 +1,7 @@
+| Estilo                 | Ejemplo              | Usos comunes                     |
+| ---------------------- | -------------------- | -------------------------------- |
+| `snake_case`           | `send_email()`       | Funciones, variables en Python   |
+| `camelCase`            | `resetPassword()`    | Funciones, variables en JS, Java |
+| `PascalCase`           | `ResetPasswordView`  | Clases, componentes              |
+| `SCREAMING_SNAKE_CASE` | `MAX_VALUE`          | Constantes                       |
+| `kebab-case`           | `reset-password-url` | URLs, nombres de archivo web     |
