@@ -9,5 +9,7 @@
 hooks:
 useState -> nos permite tener un state en el component.
 useEffect -> nos permite ejecutar código arbitrario (código que se desee)
-    cuando el compoenent se monta (renderiza) en el dom y cada ves que cambian las
+    cuando el compoenent se renderiza en el dom y cada ves que cambian las
     dependencias que nosotros le indiquemos.
+StrictMode -> solo te sirve en dev como ayuda, en prd no se toma en
+    cuanta se ignora.
