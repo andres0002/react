@@ -1,3 +1,7 @@
+// js
+// react
+// third
+// own
 import './App.css'
 import { TwitterFollowCard } from './components/TwitterFollowCard'
 
@@ -28,10 +32,7 @@ const users = [
 ]
 
 export function App() {
-  // react -> renderiza a element.
-  // component -> función que devuelve element(factoria de elements).
   return (
-    // <></> -> alternativa al React.Fragment -> para renderizar mas de un element.
     <section className='App'>
       {
         users.map(user => {

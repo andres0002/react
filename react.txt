@@ -5,3 +5,9 @@
 | `PascalCase`           | `ResetPasswordView`  | Clases, componentes              |
 | `SCREAMING_SNAKE_CASE` | `MAX_VALUE`          | Constantes                       |
 | `kebab-case`           | `reset-password-url` | URLs, nombres de archivo web     |
+
+hooks:
+useState -> nos permite tener un state en el component.
+useEffect -> nos permite ejecutar código arbitrario (código que se desee)
+    cuando el compoenent se monta (renderiza) en el dom y cada ves que cambian las
+    dependencias que nosotros le indiquemos.
