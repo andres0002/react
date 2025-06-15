@@ -13,3 +13,42 @@ useEffect -> nos permite ejecutar código arbitrario (código que se desee)
     dependencias que nosotros le indiquemos.
 StrictMode -> solo te sirve en dev como ayuda, en prd no se toma en
     cuanta se ignora.
+-----------------------------------------------------Start Tests--------------------------------------------------------------------------------------
+La Pirámide de Testing (Buena práctica recomendada):
+         ▲
+         │   E2E tests (Playwright) - Pocos pero muy importantes
+        ▲▲
+       │││   Tests de integración / componentes conectados
+      ▲▲▲▲
+     │││││   Tests de componente e unitarios (base sólida y rápida)
+    ▲▲▲▲▲▲
+
+a. Unitario – suma.test.js
+    import { suma } from '../../src/utils/suma';
+
+    test('suma correctamente dos números', () => {
+    expect(suma(2, 3)).toBe(5);
+    });
+
+b. Componente – Formulario.test.jsx
+    import { render, screen, fireEvent } from '@testing-library/react';
+    import Formulario from '../../src/components/Formulario';
+
+    test('muestra el saludo con el nombre ingresado', () => {
+    render(<Formulario />);
+    fireEvent.change(screen.getByLabelText('Nombre'), { target: { value: 'William' } });
+    fireEvent.click(screen.getByText('Enviar'));
+    expect(screen.getByTestId('saludo')).toHaveTextContent('Hola, William!');
+    });
+
+c. E2E – formulario.spec.ts
+    import { test, expect } from '@playwright/test';
+
+    test('flujo completo del formulario', async ({ page }) => {
+    await page.goto('/');
+    const input = page.getByLabel('Nombre');
+    await input.fill('Millie');
+    await page.getByRole('button', { name: 'Enviar' }).click();
+    await expect(page.getByTestId('saludo')).toHaveText('Hola, Millie!');
+    });
+-----------------------------------------------------End Tests--------------------------------------------------------------------------------------
