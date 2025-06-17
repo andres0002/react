@@ -1,3 +1,5 @@
+-------------------------------------------------------------Start Naming Conventions----------------------------------------------------------------------------------------
+Esa tabla describe estilos de nombramiento (naming conventions), que son formas estándar de escribir nombres de funciones, variables, clases, etc., en programación. 
 | Estilo                 | Ejemplo              | Usos comunes                     |
 | ---------------------- | -------------------- | -------------------------------- |
 | `snake_case`           | `send_email()`       | Funciones, variables en Python   |
@@ -5,14 +7,33 @@
 | `PascalCase`           | `ResetPasswordView`  | Clases, componentes              |
 | `SCREAMING_SNAKE_CASE` | `MAX_VALUE`          | Constantes                       |
 | `kebab-case`           | `reset-password-url` | URLs, nombres de archivo web     |
-
-hooks:
-useState -> nos permite tener un state en el component.
-useEffect -> nos permite ejecutar código arbitrario (código que se desee)
-    cuando el compoenent se renderiza en el dom y cada ves que cambian las
-    dependencias que nosotros le indiquemos.
+-------------------------------------------------------------End Naming Conventions----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 StrictMode -> solo te sirve en dev como ayuda, en prd no se toma en
     cuanta se ignora.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------Start Hooks-------------------------------------------------------------------------------------
+hooks:
+useState -> Nos permite tener un state en el component.
+useEffect -> Nos permite ejecutar código arbitrario (código que se desee)
+    cuando el compoenent se renderiza en el dom y cada ves que cambian las
+    dependencias que nosotros le indiquemos.
+useCustom -> Los custom hooks son función que tienen uno o mas hooks
+    (useState, useEffect, etc (que lo componen)).
+useRef -> Nos permite crear una referencia mutable que persiste durante todo el
+    ciclo de vida del component, es muy util para guardar cualquier valor que puedas
+    mutar como un identificador, un elemento de el dom, un contador, lo que se desee.
+    Y que cada ves que cambia no vuelve a renderizar el component eso lo hace totalmente
+    diferente al useState ya que el useState cada ves que cambia renderiza el componente,
+    pero el useRef cada ves que cambia no renderiza el component o no dispara un nuevo
+    renderizado.
+useMemo -> Nos permite memorizar un valor calculado o recalcular un valor cada que las
+    dependencias cambian, para evitar cálculos innecesarios en cada renderizado,
+    el cual tiene dependencias similares a las del useEffect, mejorando el
+    rendimiento en algunos casos.
+useCallback -> Nos permite realizar la misma funcionalidad del useMemo pero para
+    functions, el useCallback usa el useMemo por debajo.
+-----------------------------------------------------End Hooks-------------------------------------------------------------------------------------
 -----------------------------------------------------Start Tests--------------------------------------------------------------------------------------
 La Pirámide de Testing (Buena práctica recomendada):
          ▲
