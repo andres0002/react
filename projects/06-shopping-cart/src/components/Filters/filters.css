@@ -1,0 +1,41 @@
+.filters {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.filters > div {
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+}
+
+.label-select {
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    appearance: none;
+    background-color: #fff;
+    color: #222;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 150px;
+    /* icon */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+}
+
+@media screen and (max-width: 420px) {
+    .filters {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

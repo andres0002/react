@@ -33,6 +33,14 @@ useMemo -> Nos permite memorizar un valor calculado o recalcular un valor cada q
     rendimiento en algunos casos.
 useCallback -> Nos permite realizar la misma funcionalidad del useMemo pero para
     functions, el useCallback usa el useMemo por debajo.
+useId -> Nos permite generar un identificador unico que siempre va ser el mismo
+    para toda la app, ademas funciona con server site rendering.
+useContext -> Nos permite acceder al valor de un contexto en cualquier componente
+    funcional, sin necesidad de pasar props manualmente a través de muchos
+    niveles (prop drilling).
+useReducer -> Nos permite manejar el state de una manera escalable, ya que se basa en
+    recibir el state (current) y el action a realizer en una function y apartir de eso
+    return el new state.
 -----------------------------------------------------End Hooks-------------------------------------------------------------------------------------
 -----------------------------------------------------Start Tests--------------------------------------------------------------------------------------
 La Pirámide de Testing (Buena práctica recomendada):

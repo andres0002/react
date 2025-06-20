@@ -1,0 +1,31 @@
+.products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 80%;
+    gap: 20px;
+}
+
+.products li {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 5px #fff4;
+    border-radius: 8px;
+}
+
+.products img {
+    max-width: 100%;
+}
+
+.products span {
+    font-size: 1rem;
+    opacity: .9;
+}
