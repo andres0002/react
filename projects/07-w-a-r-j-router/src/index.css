@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 5px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn:hover {
+  background-color: #fff2;
+  box-shadow: 0 0 8px #fff6;
+}
