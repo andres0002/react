@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222 !important;
+  color: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Courier New', Courier, monospace !important;
+}
