@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 6px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+  background-color: #fff2;
+  box-shadow: 0 0 5px #fff;
+}
+
+input {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover {
+  background-color: #fff2;
+  box-shadow: 0 0 5px #fff;
+}
